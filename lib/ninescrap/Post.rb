@@ -9,7 +9,7 @@ require 'chronic'
 
 class Post
   attr_reader :self
-
+  
   # Post.new 'http://9gag.com/gag/aeYB7rO'
   def initialize url
     @url = url
@@ -69,6 +69,8 @@ class Post
   def to_s
     "Url: #{@url}\nTitle: #{@title}\nImage: #{@img}\nUpvotes: #{@upvotes}\nComments: #{@nbComments}"
   end
+
+  
   ##
   # Main methods
   ##
@@ -126,6 +128,7 @@ class Post
     # see 'loadComments'
     
     loadComments
+    self
   end
 
   def loadComments
@@ -163,4 +166,10 @@ class Post
     json[:comments] = comments
     JSON.generate(json)
   end
+
+  def prettify
+    JSON.pretty_generate(to_json)
+  end
+
+  private :loadComments
 end
