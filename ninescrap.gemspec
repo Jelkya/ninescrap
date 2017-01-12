@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "ninescrap"
   spec.version       = Ninescrap::VERSION
   spec.authors       = ["miniTapir"]
-  spec.email         = ["brett.choquet@gmail.com"]
+  spec.email         = ["siam-brett@hotmail.fr"]
 
-  spec.summary       = %q{9GAG unofficial API.}
-  spec.description   = %q{Scraps and returns JSON from posts.}
+  spec.summary       = %q{9GAG unofficial API in Ruby.}
+  spec.description   = %q{Scraps and returns JSON from posts, using Ruby.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

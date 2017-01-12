@@ -1,6 +1,6 @@
 # Ninescrap
 
-**9GAG** unofficial API to scrap data from the website posts.
+**9GAG** unofficial API in *Ruby* to scrap data from the website posts.
 
 ## Description
 
