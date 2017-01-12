@@ -79,9 +79,6 @@ class Post
   # Use the url given @ Post initialization
   # to scrap all the content of a post
   def loadFullPage
-    puts "Loading /#{@id}..."
-    start = Time.now
-
     # headless uses Watir to use browser navigation
     # without actually opening the browser
     headless = Headless.new
@@ -114,8 +111,6 @@ class Post
     html = b.html
     headless.destroy
     current_page= Nokogiri::HTML(html)
-    diff = Time.now - start
-    puts "Loaded in #{diff.round(2)} secs."
     
     # setting Post attributes 
     @current_page = current_page
@@ -134,7 +129,6 @@ class Post
   def loadComments
     # Every comment is in a 'comment-entry' class element
     comments= @current_page.css(".badge-comment").drop 1
-    puts "#{comments.size} first comments loaded."
     comments.each{|x|
       c = Comment.new
       c.author = x.css(".username").text
@@ -165,10 +159,6 @@ class Post
     @comments.each{|x| comments.push(JSON.parse(x.to_json))}
     json[:comments] = comments
     JSON.generate(json)
-  end
-
-  def prettify
-    JSON.pretty_generate(to_json)
   end
 
   private :loadComments

@@ -1,8 +1,19 @@
 # Ninescrap
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ninescrap`. To experiment with that code, run `bin/console` for an interactive prompt.
+**9GAG** unofficial API to scrap data from the website posts.
 
-TODO: Delete this and the text above, and describe your gem
+## Description
+
+It can be used to retrieve data in order to feed a database.
+A *Post*, once loaded, can be serialized via _to\_json_ method.
+
+For now, it only gather simple post information, and the first 20 comments.
+
+## Requirements
+
+* Needs _**Watir**_ ([Documentation](https://watir.com/installation/))
+* Download the **chromedriver** you need [chromedriver links](https://sites.google.com/a/chromium.org/chromedriver/downloads).
+** Once downloaded, add its path to your *PATH*
 
 ## Installation
 
@@ -22,20 +33,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+#! /usr/bin/env ruby
+require 'ninescrap'
 
-## Development
+# Standard usage
+post = NineScrap.fromUrl "http://9gag.com/gag/aeYB7rO"
+puts JSON.generate post
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+# Multiple urls to fetch
+urls = Array.new
+urls.push "http://9gag.com/gag/aeYB7rO"
+posts = NineScrap.fromArray urls
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+posts.each do |p|
+  puts JSON.generate p
+end
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ninescrap.
+```
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
