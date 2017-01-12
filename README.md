@@ -19,6 +19,11 @@ For now, it only gather simple post information, and the first 20 comments.
 $ chromedriver
 ```
 
+* By default, **Watir** opens a browser to load dynamic content. To avoir that, we use *headless*, which does the same without opening anything. It requires **xvfb**.
+```bash
+$ sudo apt-get install xvfb
+```
+
 ## Installation
 
 In the downloaded repo, build it with:
@@ -42,6 +47,7 @@ To check if it installed properly
    > require 'ninescrap'
     => true
 ```
+
 
 ## Usage
 
