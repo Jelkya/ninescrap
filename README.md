@@ -16,24 +16,25 @@ For now, it only gather simple post information, and the first 20 comments.
 * You should be able to execute the following command :
 
 ```bash
-$chromedriver
+$ chromedriver
 ```
 
 ## Installation
 
-Add this line to your application's Gemfile:
+In the downloaded repo, build it with:
 
-```ruby
-gem 'ninescrap'
-```
+    $ gem build ninescrap.gemspec
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
+And install it :
     $ gem install ninescrap
+
+### Check installation
+
+To check if it installed properly
+
+   $ irb
+   > require 'ninescrap'
+    => true
 
 ## Usage
 
