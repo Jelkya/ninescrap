@@ -11,9 +11,13 @@ For now, it only gather simple post information, and the first 20 comments.
 
 ## Requirements
 
-* Needs _**Watir**_ ([Documentation](https://watir.com/installation/))
-* Download the **chromedriver** you need [chromedriver links](https://sites.google.com/a/chromium.org/chromedriver/downloads).
+* Download the **chromedriver** **Watir** needs [chromedriver links](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 * Once downloaded, add its path to your *PATH*
+* You should be able to execute the following command :
+
+```bash
+$chromedriver
+```
 
 ## Installation
 
