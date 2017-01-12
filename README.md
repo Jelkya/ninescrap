@@ -23,18 +23,25 @@ $ chromedriver
 
 In the downloaded repo, build it with:
 
+```bash
     $ gem build ninescrap.gemspec
+```
 
 And install it :
+
+```bash
     $ gem install ninescrap
+```
 
 ### Check installation
 
 To check if it installed properly
 
+```bash
    $ irb
    > require 'ninescrap'
     => true
+```
 
 ## Usage
 
