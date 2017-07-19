@@ -117,7 +117,7 @@ class Post
     @title = current_page.css("article header h2").text 
     @upvotes = current_page.css("article")[0]["data-entry-votes"]
     @nbComments = current_page.css("article")[0]["data-entry-comments"]
-    @img = current_page.css("div.badge-post-container.badge-entry-content.post-container > a > img")[0]["src"]
+    @img = current_page.css("div.badge-post-container.badge-entry-content.post-container > a > div > img")[0]["src"]
 
     # Specific behavior for comments
     # see 'loadComments'

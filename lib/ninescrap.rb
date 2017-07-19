@@ -51,7 +51,7 @@ module NineScrap
   # returns true if url is a valid
   # url and from Nine
   def self.validUrl url
-    url =~ URI::regexp and url =~ /\b(?:https?:\/\/)?9gag\.com\/[A-Za-z0-9\/]+/
+    url =~ URI::regexp && url =~ /\b(?:https?:\/\/)?9gag\.com\/[A-Za-z0-9\/]+/
   end
 
 end
