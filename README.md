@@ -11,9 +11,9 @@ For now, it only gather simple post information, and the first 20 comments.
 
 ## Requirements
 
-* Download the **chromedriver** **Watir** needs [chromedriver links](https://sites.google.com/a/chromium.org/chromedriver/downloads).
+* Download the **chromedriver** to make **Watir** work. [chromedriver links](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 * Once downloaded, add its path to your *PATH*
-* You should be able to execute the following command :
+* You should be able to execute the following command in your terminal :
 
 ```bash
 $ chromedriver
@@ -29,13 +29,18 @@ $ sudo apt-get install xvfb
 In the downloaded repo, build it with:
 
 ```bash
-    $ gem build ninescrap.gemspec
+$ gem build ninescrap.gemspec
 ```
 
-And install it :
+Install it with :
 
 ```bash
-    $ gem install ninescrap
+$ gem install ninescrap
+```
+
+And get all the dependencies with _bundler_:
+```
+$ bundler install
 ```
 
 ### Check installation
